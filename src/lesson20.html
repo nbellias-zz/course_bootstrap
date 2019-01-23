@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootstrap 4 Navigation Bars</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!--
+<nav class="navbar navbar-expand-sm bg-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 3</a>
+    </li>
+  </ul>
+</nav>
+<br>
+
+<div class="container-fluid">
+  <h3>Basic Navbar Example</h3>
+  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+  <p>The navbar-expand-xl|lg|md|sm class determines when the navbar should stack vertically (on extra large, large, medium or small screens).</p>
+</div>
+
+Remove the .navbar-expand-xl|lg|md|sm class to create a vertical navigation bar
+Add the .justify-content-center class to center the navigation bar
+Use any of the .bg-color classes to change the background color of the navbar (.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark and .bg-light)
+
+The .navbar-brand class is used to highlight the brand/logo/project name of your page:
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Logo</a>
+  ...
+</nav>
+
+Very often, especially on small screens, you want to hide the navigation links and replace them with a button that should reveal them when clicked on.
+To create a collapsible navigation bar, use a button with class="navbar-toggler", data-toggle="collapse" and data-target="#thetarget". 
+Then wrap the navbar content (links, etc) inside a div element with class="collapse navbar-collapse", followed by an id that matches the data-target of the button: "thetarget".
+
+----------------
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Logo</a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<br>
+  
+<div class="container">
+  <h3>Navbar With Dropdown</h3>
+  <p>This example adds a dropdown menu in the navbar.</p>
+</div>
+
+-----------
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</nav>
+<br>
+
+<div class="container">
+  <h3>Navbar Forms</h3>
+  <p>Use the .form-inline class to align form elements side by side inside the navbar.</p>
+</div>
+
+--------------
+You can also use other input classes, such as .input-group-prepend or .input-group-append to attach an icon or help text next to the input field. You will learn more about these classes in the Bootstrap Inputs chapter.
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <form class="form-inline">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">@</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Username">
+    </div>    
+  </form>
+</nav>
+<br>
+
+<div class="container">
+  <h3>Navbar Forms</h3>
+  <p>Use the .form-inline class to align form elements side by side inside the navbar.</p>
+</div>
+
+-------------------
+
+Use the .navbar-text class to vertical align any elements inside the navbar that are not links (ensures proper padding and text color).
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Navbar text
+    </span>
+  </nav>
+  <br>
+  
+  <div class="container">
+    <h3>Navbar Text</h3>
+    <p>Use the .navbar-text class to vertical align any elements inside the navbar that are not links (ensures proper padding).</p>
+  </div>
+
+  ------------------
+  The navigation bar can also be fixed at the top or at the bottom of the page.
+  A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.
+  The .fixed-top class makes the navigation bar fixed at the top:
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  ...
+  </nav>
+
+  ---------
+  A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+    ...
+  </nav>
+
+  ----------------
+  Sticky Navbar
+  A sticky navigation bar stays fixed at the top of the page when you scroll past it.
+  Scroll this page to see the effect. Note: sticky-top does not work in IE11 and earlier.
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  ...
+  </nav>
+
+  
+-->
+
+</body>
+
+</html>
