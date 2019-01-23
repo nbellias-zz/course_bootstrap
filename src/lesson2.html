@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap 4 Grid</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!--
+    The Bootstrap 4 grid system has five classes:
+
+        .col- (extra small devices - screen width less than 576px)
+        .col-sm- (small devices - screen width equal to or greater than 576px)
+        .col-md- (medium devices - screen width equal to or greater than 768px)
+        .col-lg- (large devices - screen width equal to or greater than 992px)
+        .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+    
+    The classes above can be combined to create more dynamic and flexible layouts.
+
+    Tip: Each class scales up, so if you wish to set the same widths for sm and md, you only need to specify sm.
+-->
+
+    <div class="container-fluid">
+        <h1>Basic Grid Structure</h1>
+        <h1>Bootstrap's grid system is built with flexbox and allows up to 12 columns across the page.</h1>
+        <p>Resize the browser window to see the effect.</p>
+        <p>The first, second and third row will automatically stack on top of each other when the screen is less than
+            576px wide.</p>
+    </div>
+    
+    <div class="container-fluid">
+        <!-- Control the column width, and how they should appear on different devices -->
+        <div class="row">
+            <div class="col-sm-6" style="background-color:yellow;">50%</div>
+            <div class="col-sm-6" style="background-color:orange;">50%</div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-4" style="background-color:yellow;">33.33%</div>
+            <div class="col-sm-4" style="background-color:orange;">33.33%</div>
+            <div class="col-sm-4" style="background-color:yellow;">33.33%</div>
+        </div>
+        <br>
+
+        <!-- Or let Bootstrap automatically handle the layout -->
+        <div class="row">
+            <div class="col-sm" style="background-color:yellow;">25%</div>
+            <div class="col-sm" style="background-color:orange;">25%</div>
+            <div class="col-sm" style="background-color:yellow;">25%</div>
+            <div class="col-sm" style="background-color:orange;">25%</div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col" style="background-color:yellow;">25%</div>
+            <div class="col" style="background-color:orange;">25%</div>
+            <div class="col" style="background-color:yellow;">25%</div>
+            <div class="col" style="background-color:orange;">25%</div>
+        </div>
+    </div>
+    <!--Example: Stacked-to-horizontal-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 bg-success">
+                <p>Lorem ipsum...</p>
+            </div>
+            <div class="col-sm-6 bg-warning">
+                <p>Sed ut perspiciatis...</p>
+            </div>
+        </div>
+    </div>
+    <!--Example: Fluid container-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Lorem ipsum...</p>
+            </div>
+            <div class="col-sm-6">
+                <p>Sed ut perspiciatis...</p>
+            </div>
+        </div>
+    </div>
+    <!--Auto Layout Columns-->
+    <div class="container-fluid">
+        <h1>Auto Layout Columns</h1>
+        <p>In Bootstrap 4, there is an easy way to create equal width columns: just use the <code>.col-size</code>
+            class on a specified number of col elements. Bootstrap will recognize how many columns there are, and
+            each column will get the same width.</p>
+        <p>Two columns: 50% width on all screens, except for extra small (100% width on screens less than <strong>576px</strong>
+            wide)</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm bg-success">1 of 2</div>
+                <div class="col-sm bg-warning">2 of 2</div>
+            </div>
+        </div>
+        <br>
+
+        <p>Four columns: 25% width on all screens, except for extra small (100% width on screens less than <strong>576px</strong>
+            wide)</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm bg-success">1 of 4</div>
+                <div class="col-sm bg-warning">2 of 4</div>
+                <div class="col-sm bg-success">3 of 4</div>
+                <div class="col-sm bg-warning">4 of 4</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
