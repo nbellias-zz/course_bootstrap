@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootstrap 4 Media Objects</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <style src="../css/mystyle.css"></style>
+
+</head>
+
+<body>
+  <!--
+Bootstrap provides an easy way to align media objects (like images or videos) together with content. Media objects are often used to display blog comments, tweets and so on:
+To nest media objects, place a new .media container inside the .media-body container:
+To right-align the media image, add the image after the .media-body container:
+Use the flex utilities, align-self-* classes to place the media object on the top, middle or at the bottom:
+
+-->
+  <div class="container mt-3">
+    <h2>Media Object</h2>
+    <p>Create a media object with the .media and .media-body classes:</p>
+    <div class="media border p-3">
+      <img src="../img/memphis_belle.jpeg" alt="Memphis Belle" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+      <div class="media-body">
+        <h4>Memphis Belle <small><i>Posted on February 19, 2016</i></small></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
